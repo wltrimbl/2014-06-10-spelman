@@ -21,7 +21,6 @@ in the last four years.
 * [Shell variables](intermediate/shell/03-var.html)
 * [Shell job control](intermediate/shell/04-job.html)
 * [Make](intermediate/make/index.html)
-* [Doit](intermediate/doit/index.html) 
 * [R](intermediate/r/README.html)
 * [git](intermediate/git/index.html)
 * [Intermediate python topics](intermediate/python/index.html)

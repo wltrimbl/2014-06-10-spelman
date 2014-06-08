@@ -9,6 +9,7 @@ in the last four years.
 
 ## Lessons
 
+*   [Overview](overview/overview.html)
 *   [Introduction](intro.html)
 *   [The Unix Shell](novice/shell/index.html)
 *   [Version Control with Git](novice/git/index.html)

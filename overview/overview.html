@@ -29,14 +29,14 @@ Software Carpentry Team
 <li>Founded by Greg Wilson in 1998, teaching scientists how to use supercomputers at LANL.</li>
 <li>Open sourced materials 2004-present</li>
 <li>Currently funded by the Sloan Foundation and the Mozilla Foundation</li>
-<li>http://www.plosbiology.org/article/info%3Adoi%2F10.1371%2Fjournal.pbio.1001745 &quot;Best practices for scientific computing&quot; paper in PLOS Biology</li>
+<li>This workshop thanks to NSF</li>
 </ul>
 </div><div id="what-we-teach" class="slide section level2">
 <h1>What We Teach</h1>
 <ul>
 <li>Unix Command Line Interface (Shell)</li>
 <li>Shell automation</li>
-<li>Version Control</li>
+<li>Version Control (using git)</li>
 <li>Python</li>
 <li>Testing</li>
 </ul>
@@ -44,13 +44,11 @@ Software Carpentry Team
 <h1>What We <em>Actually</em> Teach</h1>
 <ul>
 <li>A program is just another piece of lab equipment</li>
-<li>Programming is a human activity</li>
-<li>Little pieces loosely joined</li>
-<li>Let the computer repeat it</li>
+<li>Human resources are the precious ones--write programs for humans</li>
+<li>Don't repeat yourself, let the computer repeat it</li>
 <li>Paranoia makes us productive</li>
 <li>Better algorithms beat better hardware</li>
 </ul>
-<p><em>How to THINK like a programmer</em></p>
 </div><div id="who-we-teach" class="slide section level2">
 <h1>Who We Teach</h1>
 <div align="center">
@@ -83,21 +81,16 @@ Software Carpentry Team
 </ul>
 </div><div id="our-goals-for-you" class="slide section level2">
 <h1>Our Goals for You</h1>
-<h3 id="we-will-take-you-on-a-tour-of">We will take you on a tour of:</h3>
 <ul>
-<li>Automating things with the <strong>shell</strong></li>
-<li>Practical Programming with <strong>Python</strong></li>
-<li>Managing and sharing Software, Data, and Manuscripts with <strong>Git</strong></li>
+<li>If you've ever overwritten the wrong file, we'll show you how to use version control.</li>
+<li>If you've ever spent hours typing the same commands over and over again, we'll show you how to automate those tasks using simple scripts.</li>
+<li>If you've ever spent an afternoon trying to figure out what the program you wrote last week actually does, we'll show you how to break your code into modules that you can read, debug, and improve piece by piece.</li>
 </ul>
-</div>
-<div id="some-high-level-advice" class="titleslide slide section level1"><h1>Some High-Level Advice</h1></div><div id="be-fluent-in-multiple-languages" class="slide section level2">
-<h1>Be fluent in multiple languages</h1>
-<p><comment> You speak multiple languages when interacting with a computer. Choosing to use a new tool, library, or language can be similar to learning a new language: </comment></p>
+</div><div id="some-high-level-advice" class="slide section level2">
+<h1>Some High-Level Advice</h1>
 <ul>
-<li>There is a high initial startup cost as you learn vocabulary, grammar, and idioms <font color="blue"><code>sum(x*y for x,y in itertools.izip(x_vector, y_vector))</code> </font></li>
-<li>But once you have gained some fluency, you will find yourself capable of new things!</li>
-<li>You will learn faster by observing and working with others who are more skilled than you</li>
-<li>Aim for languages and tools that allow you to express your models and manage your data simply.</li>
+<li>You will learn faster by observing and working with others who are more skilled than you ( than by working alone )</li>
+<li>http://www.plosbiology.org/article/info%3Adoi%2F10.1371%2Fjournal.pbio.1001745 &quot;Best practices for scientific computing&quot; paper in PLOS Biology</li>
 </ul>
 </div><div id="make-it-work-right-first-make-it-fast-later." class="slide section level2">
 <h1>Make it work right first, make it fast later.</h1>
@@ -108,75 +101,28 @@ Software Carpentry Team
 </div><div id="increase-debugging-bandwidth" class="slide section level2">
 <h1>Increase debugging bandwidth</h1>
 <ul>
-<li><strong>REPL (read-eval-print-loop)</strong> environments tighten the coupling between the code you write and the results you see, increasing productivity.</li>
+<li>The sooner you can get feedback as to whether it's working, the faster you can move forward.</li>
 <li>Development environments and debuggers give you more information at once</li>
-<li>Test your procedures on subsets of your data <strong>so that you learn whether it works faster</strong></li>
+<li>Test the parts first, not the whole; fail early, fail often!</li>
+<li>Test your workflow on subsets of your data <strong>so that you learn whether it works faster</strong></li>
 </ul>
-</div>
-<div id="dont-repeat-yourself-or-others" class="titleslide slide section level1"><h1>Don't Repeat Yourself (or Others)</h1></div><div id="automate-common-actions-by-saving-simple-blocks-of-code-into-scripts" class="slide section level2">
-<h1>Automate common actions by saving simple blocks of code into <strong>scripts</strong></h1>
+</div><div id="warning-signs" class="slide section level2">
+<h1>Warning signs</h1>
 <ul>
-<li>A script is a set of commands organized into a single file</li>
-<li>The script is the basest unit of scientific programming, you should be comfortable writing these whenever you want to save or otherwise document or repeat your actions</li>
-<li>Use scripts to explore new ideas, they are easy to write and throw away</li>
+<li>If you find yourself typing the same commands again and again</li>
+<li>If you repeat the same block of code with cut-and-paste more than once</li>
+<li>If any piece of code is too complex to easily describe, consider refactoring it</li>
+<li>If you find yourself writing code the same script over and over</li>
+</ul>
+</div><div id="dont-repeat-yourself" class="slide section level2">
+<h1>Don't repeat yourself</h1>
+<ul>
 <li><strong>Don't repeat commands into your REPL, save them to a script</strong></li>
-</ul>
-</div><div id="refactor-commonly-used-blocks-of-code-into-functions" class="slide section level2">
-<h1>Refactor commonly used blocks of code into <strong>functions</strong></h1>
-<ul>
-<li>Eventually, you will find that your scripts have a lot of repeated code, or that you are spending a lot of time adjusting parameters at the top of the file</li>
-<li>Refactor out repeated code into <strong>function calls</strong> in your scripts and implement the <strong>function</strong> either in the same file or a separate one</li>
-<li>Be comfortable with the calling and return syntax of your programming language environment, whether it is bash or Python</li>
-<li><strong>Don't repeat code in scripts, refactor them to functions</strong></li>
-</ul>
-</div><div id="group-commonly-used-functions-into-libraries" class="slide section level2">
-<h1>Group commonly used functions into <strong>libraries</strong></h1>
-<ul>
-<li>If you have to write a lot of software functions, consider designing and releasing a library so that others do not have to share your misfortune</li>
-<li>Check that nobody else has implemented the functionality you need</li>
-<li>If something close exists, it may be worth adapting to your needs if the project is of high quality and suitably licensed</li>
-<li><em>Openly licensed non-commercial libraries tend to have a much longer effective lifespan than unreleased codes</em></li>
+<li>Refactor commonly used blocks of code into <strong>functions</strong></li>
+<li>Group commonly used functions into <strong>libraries</strong></li>
+<li>Openly licensed non-commercial libraries tend to have a much longer effective lifespan than unreleased codes*</li>
 <li><strong>Share your code with others, and use their code</strong></li>
-</ul>
-</div>
-<div id="reduce-complexity" class="titleslide slide section level1"><h1>Reduce Complexity</h1></div><div id="basic-strategies" class="slide section level2">
-<h1>Basic strategies</h1>
-<ul>
-<li>Use languages and libraries that reduce the complexity of your work</li>
-<li>It is worth installing a complicated or expensive software tool if your computations or model are naturally expressed with it</li>
-<li>Always look for opportunities to write <strong>less</strong> code
-<ul>
-<li>you will have to do less initial work (sometimes)</li>
-<li>you will introduce less bugs</li>
-<li>your code will be easier to understand and maintain</li>
-</ul></li>
-<li>Keep individual functions short, single-purpose, possible to be confident in festooning.</li>
-</ul>
-</div><div id="back-up-your-data" class="slide section level2">
-<h1>Back up your data!</h1>
-<ul>
 <li>Back up everything important in proportion to its replacement value.</li>
-</ul>
-</div><div id="use-version-control-for-checkpointing-and-collaboration" class="slide section level2">
-<h1>Use version control for checkpointing and collaboration</h1>
-<ul>
-<li>use local version control software to checkpoint personal code development</li>
-<li>checkpointing your work encourages wild ideas and late-night coding sessions</li>
-<li>you can easily restore back in the morning if it was a bad idea</li>
-<li>use <strong>distributed version control</strong> to collaborate with others</li>
-<li>We advocate <em>Git</em>, but you may be stuck with whatever your group uses</li>
-</ul>
-</div>
-<div id="verify-and-validate-your-code" class="titleslide slide section level1"><h1>Verify and Validate your Code</h1></div><div id="principles-of-verification-and-validation" class="slide section level2">
-<h1>Principles of verification and validation</h1>
-<ul>
-<li><strong>verification</strong> - is your code correctly written?</li>
-<li>Be paranoid.</li>
-<li>test small things!<br /></li>
-<li>test that what you assume is TRUE is in fact so.</li>
-<li>test frameworks can help you verify your code</li>
-<li><strong>validation</strong> - do your computations accurately model the phenomena in question?</li>
-<li>not a good candidate for automation. (Not sad at all)</li>
 </ul>
 </div><div id="document-your-computational-work" class="slide section level2">
 <h1>Document your computational work</h1>
@@ -184,9 +130,6 @@ Software Carpentry Team
 <li>Save <strong>every bit of code</strong> you use for generating publishable results</li>
 <li>Save the scripts that get and process the data</li>
 <li>Document and comment your code for yourself as if you will need to understand it in 6 months</li>
-<li>use README files liberally</li>
-<li>as well as file-level, function-level, and inline documentation</li>
-<li>If any piece of code is too complex to easily describe, consider refactoring it</li>
 </ul>
 </div><div id="you-sometimes-need-geeks.-you-never-need-dorks." class="slide section level2">
 <h1>You sometimes need geeks. You never need dorks.</h1>
@@ -200,10 +143,9 @@ Software Carpentry Team
 </table>
 </div>
 
-</div>
-<div id="thats-all-folks" class="titleslide slide section level1"><h1>That's all Folks</h1></div>
-<div id="books" class="titleslide slide section level1"><h1>Books</h1></div>
-<div id="research-literature" class="titleslide slide section level1"><h1>Research Literature</h1></div><div id="programming-languages-for-scientific-computing" class="slide section level2">
+</div><div id="thats-all-folks" class="slide section level2">
+<h1>That's all Folks</h1>
+</div><div id="programming-languages-for-scientific-computing" class="slide section level2">
 <h1>Programming Languages for Scientific Computing</h1>
 <p>Matthew G. Knepley</p>
 <p>Preprint: http://arxiv.org/pdf/1209.1711.pdf</p>

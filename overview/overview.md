@@ -1,5 +1,5 @@
 % Software Carpentry - Overview
-  Spelman College 
+  Spelman College
 % Software Carpentry Team
 % June 2014 
 
@@ -19,27 +19,23 @@
 * Founded by Greg Wilson in 1998, teaching scientists how to use supercomputers at LANL.
 * Open sourced materials 2004-present
 * Currently funded by the Sloan Foundation and the Mozilla Foundation
-* http://www.plosbiology.org/article/info%3Adoi%2F10.1371%2Fjournal.pbio.1001745 
- "Best practices for scientific computing" paper in PLOS Biology
+* This workshop thanks to NSF
 
 ## What We Teach
 
 * Unix Command Line Interface (Shell)
 * Shell automation 
-* Version Control
+* Version Control (using git)
 * Python
 * Testing
 
 ## What We *Actually* Teach
 
 * A program is just another piece of lab equipment
-* Programming is a human activity
-* Little pieces loosely joined
-* Let the computer repeat it
+* Human resources are the precious ones--write programs for humans
+* Don't repeat yourself, let the computer repeat it
 * Paranoia makes us productive
 * Better algorithms beat better hardware
-
-*How to THINK like a programmer*
 
 ## Who We Teach
 
@@ -59,37 +55,20 @@
 ## Who We Are
 
 * Will Trimble (Argonne National Laboratory)
-* Elijah Lowe (Michigan State University) 
+* Elijah Lowe (Michigan State University)
 * volunteers
  
 ## Our Goals for You
 
-### We will take you on a tour of:
+* If you've ever overwritten the wrong file, we'll show you how to use version control.
+* If you've ever spent hours typing the same commands over and over again, we'll show you how to automate those tasks using simple scripts.
+* If you've ever spent an afternoon trying to figure out what the program you wrote last week actually does, we'll show you how to break your code into modules that you can read, debug, and improve piece by piece.
 
-* Automating things with the **shell**
-* Practical Programming with **Python**
-* Managing and sharing Software, Data, and Manuscripts with **Git**
+## Some High-Level Advice
 
-# Some High-Level Advice
-
-## Be fluent in multiple languages
-<comment>
-You speak multiple languages when interacting with a computer.
-Choosing to use a new tool, library, or language can be similar to
-learning a new language:
-</comment>
-
-
-+ There is a high initial startup cost as you learn vocabulary, grammar, and
-idioms
-<font color=blue>`sum(x*y for x,y in itertools.izip(x_vector, y_vector))`
-</font color>
-+ But once you have gained some fluency, you will find yourself capable of
-new things!
-+ You will learn faster by observing and working with others who are more
-skilled than you
-+ Aim for languages and tools that allow you to express your models and
-manage your data simply. 
+* You will learn faster by observing and working with others who are more
+skilled than you ( than by working alone )
+* http://www.plosbiology.org/article/info%3Adoi%2F10.1371%2Fjournal.pbio.1001745 "Best practices for scientific computing" paper in PLOS Biology
 
 ## Make it work right first, make it fast later.
 * "Premature optimization is the root of all evil." -- Donald Knuth
@@ -98,94 +77,31 @@ less time from the start is wrongly directed attention.
 
 ## Increase debugging bandwidth
 
-* **REPL (read-eval-print-loop)** environments tighten the coupling between
-the code you write and the results you see, increasing productivity.
+* The sooner you can get feedback as to whether it's working, the faster you can move forward. 
 * Development environments and debuggers give you more information at once 
-* Test your procedures on subsets of your data **so that you learn whether
+* Test the parts first, not the whole; fail early, fail often! 
+* Test your workflow on subsets of your data **so that you learn whether
 it works faster**
 
-# Don't Repeat Yourself (or Others)
+## Warning signs
+* If you find yourself typing the same commands again and again
+* If you repeat the same block of code with cut-and-paste more than once
+* If any piece of code is too complex to easily describe, consider refactoring it
+* If you find yourself writing code the same script over and over
 
-## Automate common actions by saving simple blocks of code into **scripts**
-
-* A script is a set of commands organized into a single file
-* The script is the basest unit of scientific programming, you should be
-comfortable writing these whenever you want to save or otherwise document or
-repeat your actions
-* Use scripts to explore new ideas, they are easy to write and throw away
+## Don't repeat yourself 
 * **Don't repeat commands into your REPL, save them to a script**
-
-## Refactor commonly used blocks of code into **functions**
-
-* Eventually, you will find that your scripts have a lot of repeated code,
-or that you are spending a lot of time adjusting parameters at the top of
-the file
-* Refactor out repeated code into **function calls** in your scripts and
-implement the **function** either in the same file or a separate one
-* Be comfortable with the calling and return syntax of your programming language
-environment, whether it is bash or Python
-* **Don't repeat code in scripts, refactor them to functions**
-
-## Group commonly used functions into **libraries**
-
-* If you have to write a lot of software functions,
-consider designing and releasing a library so that
-others do not have to share your misfortune
-* Check that nobody else has implemented the functionality you need
-* If something close exists, it may be worth adapting to your needs if the
-project is of high quality and suitably licensed
-* *Openly licensed non-commercial libraries tend to have a much longer effective
-lifespan than unreleased codes*
+* Refactor commonly used blocks of code into **functions**
+* Group commonly used functions into **libraries**
+* Openly licensed non-commercial libraries tend to have a much longer effective lifespan than unreleased codes*
 * **Share your code with others, and use their code**
-
-# Reduce Complexity
-
-## Basic strategies
-
-* Use languages and libraries that reduce the complexity of
-your work
-* It is worth installing a complicated or expensive software tool if your
-computations or model are naturally expressed with it
-* Always look for opportunities to write **less** code
-    + you will have to do less initial work (sometimes)
-    + you will introduce less bugs
-    + your code will be easier to understand and maintain
-* Keep individual functions short, single-purpose, possible
- to be confident in festooning.
-
-## Back up your data!
 * Back up everything important in proportion to its replacement value.
-
-## Use version control for checkpointing and collaboration
-
-* use local version control software to checkpoint personal code development
-  + checkpointing your work encourages wild ideas and late-night coding sessions
-  + you can easily restore back in the morning if it was a bad idea
-* use **distributed version control** to collaborate with others
-* We advocate *Git*, but you may be stuck with whatever your group uses
-
-
-# Verify and Validate your Code
-
-## Principles of verification and validation
-* **verification** - is your code correctly written?
-* Be paranoid.
-  + test small things!  
-  + test that what you assume is TRUE is in fact so.
-* test frameworks can help you verify your code
-* **validation** - do your computations accurately model the phenomena in question?
-  + not a good candidate for automation.  (Not sad at all)
 
 ## Document your computational work
 * Save **every bit of code** you use for generating publishable results
 * Save the scripts that get and process the data
 * Document and comment your code for yourself as if you will need to understand
 it in 6 months
-  + use README files liberally
-  + as well as file-level, function-level, and inline documentation
-* If any piece of code is too complex to easily describe, consider refactoring
-it
-
 
 ## You sometimes need geeks.  You never need dorks.
 <div align="center">
@@ -196,11 +112,7 @@ it
 </table>
 </div>
 
-# That's all Folks
-
-# Books
-
-# Research Literature
+## That's all Folks
 
 ## Programming Languages for Scientific Computing
 Matthew G. Knepley

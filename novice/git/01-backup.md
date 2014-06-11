@@ -40,6 +40,7 @@ $ git config --global user.name "Vlad Dracula"
 $ git config --global user.email "vlad@tran.sylvan.ia"
 $ git config --global color.ui "auto"
 $ git config --global core.editor "nano"
+$ git config --global core.autocrlf "input"
 ~~~
 </div>
 

@@ -22,5 +22,6 @@ can and should be stored in a version control system.
 3.  [Collaborating](02-collab.html)
 4.  [Conflicts](03-conflict.html)
 5.  [Open Science](04-open.html)
-
+6.  [Git Local (THW lesson)](local.md)
+6.  [Git Remote (THW lesson)](remote.md)
 </div>
